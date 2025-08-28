@@ -14,7 +14,7 @@ lang_code = "ja" if lang == "日本語" else "en"
 if st.button("音声を生成"):
     if text.strip():
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        base_filename = f"voice_{timessstamp}.mp3"
+        base_filename = f"voice_{timestamp}.mp3"
         tts = gTTS(text=text, lang=lang_code)
         tts.save(base_filename)
 
@@ -32,3 +32,4 @@ if st.button("音声を生成"):
             st.download_button("音声ファイルをダウンロード", f, file_name=final_path, mime="audio/mp3")
     else:
         st.warning("テキストを入力してください。")
+
