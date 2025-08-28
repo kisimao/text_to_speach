@@ -1,6 +1,7 @@
-***使用ライブラリ***
+
 streamlit
 gtts
 pydub
 scipy
+
 numpy
